@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "6-Minute Walk Test",
+    "slug": "six-minute-walk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to track your walk distance.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to location to track your walk distance.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location to track your walk distance."
+        }
+      ],
+      "expo-sqlite"
+    ],
+    "newArchEnabled": true
+  }
+}
